@@ -3,6 +3,7 @@
 from math import sqrt, hypot
 
 def gcd( i, j ) :
+    """Compute the greatest common denominator of I, J."""
     if ( i > j ) :
         i,j = j,i
     while i > 0 :
