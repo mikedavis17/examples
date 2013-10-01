@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsfonts}
+
+% Examples go in boxes
+\floatstyle{boxed}
+\newfloat{example}{h}{loe}
+\floatname{example}{Example}
+
+% BEGIN FORMATTING
+\baselineskip=18pt
+\hsize=6in
+%\topmargin=-0.25in
+\textheight=8.5in
+\evensidemargin=0.0in
+\oddsidemargin=0.0in
+\pagestyle{myheadings}
+\markright{Some notes and exercises in category theory.}
+
+\bibliographystyle{plain}
+
+% BEGIN MACRO DEFINITIONS
+
+\begin{document}
+
+\title{Category Theory Notes}
+\author{Mike Davis}
+%%\date{February 1, 2007}
+\maketitle
+
+%%\tableofcontents\newpage
+%%\listoffigures\newpage
+%%\listoftables\newpage
+
+\section{Session 10}
+\subsection{Exercise 4}
+\subsubsection{(a)}
+This exercise is a special case of part (c) below.  Let $n = 1.$  The
+endpoints Buffalo and Rochester, comprise $S^1$, The interval $I$ is
+$B^1$, and the interior of the line segment is $O^1$.  The road $R$ is
+$\mathbb{R}^1$.  The inclusion maps and point maps are as defined.  Function
+$m$ corresponds to function $x$ below.  Function $y$ is as described
+below.  The conclusion says that at some point my car and your car
+will be at the same point in $R$.
+
+\subsubsection{(c)}
+
+Let $n$ be any positive integer.
+Let $S^n$ be the $n$-dimensional sphere.  
+Let $B^n$ be the $n$-dimensional ball.  
+Define $O^n$ to be the interior of the $n$-dimensional ball,
+i.e., $B^n \setminus S^n$.  
+Let $\emph{1}$ be the terminal object.
+$\mathbb{R}^n$ is the $n$-dimensional Euclidean space.
+
+Define inclusion maps 
+$j_n : S^n \rightarrow B^n$,
+$i_n : B^n \rightarrow \mathbb{R}^n$,
+and 
+$k_n : O^n \rightarrow B^n$
+from their respective domains to codomains.
+
+Define families of maps
+$\{P\} : \emph{1} \rightarrow S^n$
+and 
+$\{Q\} : \emph{1} \rightarrow O^n$
+defining points in their respective codomains.
+
+Let $x$ be any continuous map 
+$x : B^n \rightarrow \mathbb{R}^n$ 
+such that for any 
+$p \in \{P\}$,
+\[x \circ j_n \circ p = i_n \circ j_n \circ p.\]
+In other words, every point on the boundary maps to itself.
+
+Let $y$ be any continuous map 
+$y : B^n \rightarrow \mathbb{R}^n$ 
+such that for any
+$p \in \{P\}$ 
+there exists 
+$q \in \{Q\}$,
+such that 
+\[y \circ j_n \circ p = i_n \circ k_n \circ q.\]
+In other words, every point on the boundary maps to a point in the
+interior.
+
+Then there exists $q \in \{Q\}$ such that 
+\[x \circ k_n \circ q = y \circ k_n \circ q,\]
+which is to say that there is a point in the interior of the ball
+which both $x$ and $y$ map to the same point in $\mathbb{R}^n$.
+
+\end{document}
